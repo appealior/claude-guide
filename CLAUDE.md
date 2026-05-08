@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project shape
 
-This repository is a **single-file Korean HTML book** — `claude-guide.html` — that introduces Claude Code workflows. There is no build step, no test suite, no package manifest, and no framework. Edits go directly into the HTML.
+This repository is a **single-file Korean HTML book** — `index.html` — that introduces Claude Code workflows. There is no build step, no test suite, no package manifest, and no framework. Edits go directly into the HTML.
 
 Adjacent files:
 - `DESIGN.md` — design system reference ("Midnight Command Center" dark theme). Treat it as the source of truth for any styling decision.
@@ -13,8 +13,8 @@ Adjacent files:
 ## Preview workflow
 
 ```
-start claude-guide.html      # Windows
-open claude-guide.html       # macOS
+start index.html      # Windows
+open index.html       # macOS
 ```
 
 Open in the browser, edit, refresh. There is no dev server.
@@ -51,6 +51,12 @@ Each `<figure><svg>` block declares its own scoped `<style>` with literal color 
 - The guide is **Korean-language**, generic-developer-targeted (no domain bias). Past inline ERP/AcmeERP examples were intentionally generalized to TypeScript / Drizzle / PostgreSQL / `User`-`Order` examples. Do not reintroduce industry-specific terminology unless asked.
 - Stack-specific commands in the appendix (A.1) must use placeholder syntax (`{프로젝트의 마이그레이션 검증 명령}`) plus 2-3 stack examples — never a single hard-coded command, since the appendix promises generic reuse.
 - Print mode (`@media print`) is intentionally maintained — preserve it when changing card or SVG styles.
+
+## Deployment
+
+- The repo is connected to Vercel via Git Integration. Pushes to `main` auto-deploy to production; PR pushes create preview deploys.
+- The HTML file is `index.html` (renamed from `claude-guide.html` so Vercel serves it at `/` with no rewrite needed).
+- `vercel.json` only configures `Cache-Control: must-revalidate` on the HTML so updates ship immediately. No build step, no framework preset.
 
 ## Git conventions
 
