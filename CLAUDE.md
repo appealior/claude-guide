@@ -50,4 +50,5 @@ Each `<figure><svg>` block declares its own scoped `<style>` with literal color 
 ## Git conventions
 
 - Commit messages: brief, focused, no `Co-Authored-By` trailer (per global CLAUDE.md preference).
+- Follow [Conventional Commits](https://www.conventionalcommits.org/): `<type>: <subject>` (e.g. `feat: add floating top button`, `fix: correct SVG focal contrast`, `docs: update DESIGN.md palette`). Common types: `feat`, `fix`, `docs`, `style`, `refactor`, `chore`. Subject in lowercase imperative, no trailing period.
 - The project is a small personal artifact; no PR / review pipeline beyond ad-hoc Codex reviews triggered by the user.
