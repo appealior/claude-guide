@@ -1,0 +1,28 @@
+# Secrets / env
+.env
+.env.*
+*.pem
+*.key
+
+# Node (in case tooling sneaks in later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel
+.vercel/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude / agent local state
+.claude/

@@ -8,7 +8,6 @@ This repository is a **single-file Korean HTML book** — `index.html` — that 
 
 Adjacent files:
 - `DESIGN.md` — design system reference ("Midnight Command Center" dark theme). Treat it as the source of truth for any styling decision.
-- `docs/improvement-plan.md` — log of past Codex review ↔ Claude rebuttal decisions. Read it before changing the appendix or SVG diagrams; it explains *why* the current shape exists.
 
 ## Preview workflow
 
@@ -18,16 +17,6 @@ open index.html       # macOS
 ```
 
 Open in the browser, edit, refresh. There is no dev server.
-
-## Hard constraint: must work offline
-
-The page **must render correctly with no internet access.** Anything that introduces a runtime network dependency is a regression.
-
-Concretely:
-- Fonts are embedded as base64 woff2 inside `<style>` (variable Inter / Space Grotesk + IBM Plex Mono 400, Latin subset only — Korean falls back to system fonts and that is intentional). Do not reintroduce `<link href="https://fonts.googleapis.com/...">`.
-- All diagrams are inline `<svg>`. Do not add `<img>`, external CSS, or external JS.
-- Hyperlinks in the body (`docs.claude.com`, etc.) are reference-only — they don't load anything for rendering. Leave them.
-- If a new font weight or family is genuinely needed, embed it the same way (download the Latin-subset woff2 from gstatic, base64-encode, append a `@font-face` block with a `data:font/woff2;base64,...` `src`).
 
 ## Design rules (follow DESIGN.md)
 
