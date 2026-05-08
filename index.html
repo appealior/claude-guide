@@ -102,7 +102,13 @@ body {
   border-right: 1px solid var(--border-subtle);
   font-family: var(--font-display);
   font-size: 13px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+.sidebar::-webkit-scrollbar { width: 6px; background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: transparent; border-radius: 3px; }
+.sidebar:hover { scrollbar-width: thin; scrollbar-color: rgba(182, 217, 252, 0.25) transparent; }
+.sidebar:hover::-webkit-scrollbar-thumb { background: rgba(182, 217, 252, 0.25); }
 .sidebar-brand { font-weight: 600; font-size: 14px; letter-spacing: 0; color: var(--ghost-white); margin-bottom: 0.25rem; }
 .sidebar-sub { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 2.5rem; }
 .sidebar-nav h4 {
