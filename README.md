@@ -18,7 +18,3 @@ Claude Code 워크플로우를 다루는 한국어 단일 페이지 핸드북.
 - **타이포그래피**: 디스플레이 제목은 Space Grotesk, 본문은 Inter (`-0.01em` 트래킹), 코드는 IBM Plex Mono.
 - **표면 처리**: 12–16px 라운드 카드 + 인셋 섀도우의 frosted glass 질감, 999px pill 라디우스 배지.
 - 자세한 토큰·컴포넌트 사양은 `DESIGN.md` 참조.
-
-## 저자
-
-Built by **Jay Lee** — [github.com/appealior/claude-guide](https://github.com/appealior/claude-guide)
